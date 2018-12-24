@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context="com.androiddeft.loginandregistration.DashboardActivity">
+    tools:context="com.androiddeft.loginandregistration.DashboardActivity"
+    android:id="@+id/relativeLayout">
+
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout_conversion_absoluteHeight="471dp"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_conversion_absoluteWidth="344dp" />
 
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp" />
+        android:layout_below="@+id/fl_container"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        tools:layout_conversion_absoluteHeight="54dp"
+        tools:layout_conversion_absoluteWidth="40dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp" />
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginBottom="117dp"
         android:background="#aaa"
         android:text="@string/logout"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        tools:layout_conversion_absoluteHeight="35dp"
+        tools:layout_conversion_absoluteWidth="88dp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="352dp" />
 
-</LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bn_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@drawable/state_bnve"
+        app:itemTextColor="@drawable/state_bnve"
+        app:menu="@menu/bottomnavigation_menu"
+        tools:layout_conversion_absoluteHeight="56dp"
+        tools:layout_conversion_absoluteWidth="315dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+
+</RelativeLayout>
